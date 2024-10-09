@@ -42,9 +42,9 @@ public static class Utilities
         if (!overwriteIfExists && File.Exists(filePath))
             return false;
 
-        string json = JsonConvert.SerializeObject(data,
+        string json = JsonConvert.SerializeObject(data
 #if DEBUG
-            Formatting.Indented);
+            ,Formatting.Indented);
 #else
             );
 #endif
